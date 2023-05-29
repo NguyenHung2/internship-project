@@ -7,6 +7,7 @@ import { Component, ElementRef, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
   title = 'admin-frontend4';
+  sideNavStatus: boolean = false;
 
   constructor(private el: ElementRef) { }
 

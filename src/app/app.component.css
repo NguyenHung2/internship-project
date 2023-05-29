@@ -1,111 +1,165 @@
+.black-border {
+  border: 1px solid black;
+}
+
+/* header */
+app-header {
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  height: 4rem;
+  z-index: 2;
+}
+
+/* main */
+main {
+  position: absolute;
+  width: 100%;
+  top: 4rem;
+  z-index: 1;
+}
+
+app-side-nav {
+  position: absolute;
+  left: 0rem;
+  width: 60px;
+  height: calc(100vh - 4rem);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  background-color: rgba(34, 34, 34, 1);
+  border-top: 1px solid white;
+  overflow-x: hidden;
+  white-space: nowrap;
+  transition: width 250ms ease-in;
+}
+
+.app-side-nav-open {
+  width: 250px;
+}
+
+.display-area {
+  position: absolute;
+  left: 60px;
+  width: calc(100% - 60px);
+  transition: left 250ms ease-in, width 250ms ease-in;
+}
+
+.display-area-shrink {
+  width: calc(100% - 250px);
+  left: 250px;
+}
 
 /* topnav css  */
 .topnav {
-    width: 100%;
-    position: fixed;
-    top:0;
-    left: 0;
-    overflow: hidden;
-    background-color: #fff;
-    border-bottom: 1px solid rgb(128, 128, 128);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  background-color: #fff;
+  border-bottom: 1px solid rgb(128, 128, 128);
 }
 
 .topnav a {
-    float: left;
-    text-align: center;
-    font-size: 17px;
-    font-weight: bold;
-    padding: 14px 16px;
+  float: left;
+  text-align: center;
+  font-size: 17px;
+  font-weight: bold;
+  padding: 14px 16px;
 }
 
 .menu {
-    float: right;
-    margin-right: 10px;
-    margin-top: 10px;
-    font-size: 30px;
-    cursor: pointer;
-    color: #000;
-    display: none;
+  float: right;
+  margin-right: 10px;
+  margin-top: 10px;
+  font-size: 30px;
+  cursor: pointer;
+  color: #000;
+  display: none;
 }
+
 /* topnav css  */
 
 /* left sidebar nav  */
 
 .sidebar {
-    position: fixed;
-    top: 63px;
-    overflow: auto;
-    background-color: #fff;
-    height: 100%;
-    border-right: 1px solid rgb(128, 128, 128);
-    padding: 30px 5px;
-    margin: 0px;
-    width: 200px;
+  position: fixed;
+  top: 63px;
+  overflow: auto;
+  background-color: #fff;
+  height: 100%;
+  border-right: 1px solid rgb(128, 128, 128);
+  padding: 30px 5px;
+  margin: 0px;
+  width: 200px;
 }
 
 .sidebar a {
-    text-decoration: none;
-    padding: 10px 10px;
-    color: #000;
-    text-align: left;
-    display: block;
+  text-decoration: none;
+  padding: 10px 10px;
+  color: #000;
+  text-align: left;
+  display: block;
 }
 
 .sidebar i {
-    padding-right: 10px;
+  padding-right: 10px;
 }
 
 .sidebar .icon {
-    float: right;
+  float: right;
 }
 
-.dropdow-container{
-    padding-left: 10px;
-    overflow-y: hidden;
-    max-height: 0px;
-    transition: all .15s ease;
+.dropdow-container {
+  padding-left: 10px;
+  overflow-y: hidden;
+  max-height: 0px;
+  transition: all .15s ease;
 }
 
-.dropdow-container.show{
-    max-height: 1000px;
-    transition: all .15 ease;
+.dropdow-container.show {
+  max-height: 1000px;
+  transition: all .15 ease;
 }
-ul{
-    padding: 0px;
+
+ul {
+  padding: 0px;
 }
-ul>li>a.active{
-    color: #000;
+
+ul>li>a.active {
+  color: #000;
 }
 
 /* left sidebar nav  */
 
 /* main-content */
 .main-content {
-    margin-left:230px;
-    margin-top: 100px;
-    padding: 10px 18px;
-    transition: margin-left .5s;
+  margin-left: 230px;
+  margin-top: 100px;
+  padding: 10px 18px;
+  transition: margin-left .5s;
 }
+
 /* main-content */
 
 
 
 @media screen and (max-width:500px) {
 
-    .menu
-    {
-        display: block;
-    }
-    .sidebar{
-        display: none;
-        width: 160px;
-    }
-    .sidebar a{
-        padding: 10px 0px;
-    }
-    .main-content
-    {
-        margin-left: 0px;
-    }
+  .menu {
+    display: block;
+  }
+
+  .sidebar {
+    display: none;
+    width: 160px;
+  }
+
+  .sidebar a {
+    padding: 10px 0px;
+  }
+
+  .main-content {
+    margin-left: 0px;
+  }
 
 }
